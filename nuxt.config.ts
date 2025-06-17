@@ -1,44 +1,17 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import { defineNuxtConfig } from 'nuxt/config'
-import vuetify from 'vite-plugin-vuetify'
-import { fileURLToPath } from 'url'
-
-export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
-  modules: ['@nuxt/fonts', '@nuxt/icon', '@nuxt/image',
-    async (options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', config => {
-        config.plugins?.push(vuetify())
-      })
+export default {
+  head: {
+    title: 'Bonsais Paradise - Tienda Premium',
+    htmlAttrs: {
+      lang: 'es'
     },
-  ],
-  build: {
-    transpile: ['vuetify'],
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'Descubre nuestra exclusiva selección de bonsáis auténticos' },
+      { name: 'format-detection', content: 'telephone=no' }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
-
-  vite: {
-    resolve: {
-      alias: {
-        '@mdi/font': fileURLToPath(new URL('./node_modules/@mdi/font', import.meta.url))
-      }
-    },
-    // Opciones de Vite si necesitas más personalización
-    ssr: {
-      noExternal: ['vuetify'],
-    },
-  },
-
-  css: [
-    'vuetify/styles',
-    // Usa esta ruta
-   
-    // O esta alternativa
-   
-  ],
-
-
-  
-
-
-})
+}

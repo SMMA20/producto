@@ -1,4 +1,21 @@
-{
-  // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json"
-}
+
+   {
+    
+  "name": "bonsai-store-nuxt",
+  "version": "1.0.0",
+  "description": "Tienda de Bonsáis con Nuxt.js",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.15.8",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.8"
+  }
+   }
+
